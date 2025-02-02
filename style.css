@@ -25,6 +25,8 @@
 }
 
 .left-panel {
+    display: flex;
+    flex-flow: column;
     height: 100%;
     width: 60%;
     background-color: aqua;
@@ -49,6 +51,11 @@
 
 }
 
+.icons-nav a {
+    text-decoration: none;
+    color: #F3C851;
+}
+
 .dynamic-content{
     background-color: bisque;
     width: 80%;
@@ -56,13 +63,33 @@
 }
 
 .static-content {
+    flex: 1 1 auto;
     background-color: blueviolet;
     width: 100%;
-    height: 80%;
+    padding: 20px;
 }
 
 .social-media {
     display: flex;
     gap: 20px;
     padding: 7px;
+}
+
+.social-media img:hover{
+    cursor: pointer;
+}
+
+.card {
+    height: 60px;
+    width: 100px;
+}
+
+.card-1 {
+    background-color: rgb(241, 156, 52);
+}
+.card-2 {
+    background-color: rgb(121, 73, 15);
+}
+.card-3 {
+    background-color: rgb(26, 16, 5);
 }
