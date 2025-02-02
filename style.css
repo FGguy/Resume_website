@@ -1,15 +1,17 @@
 .root, body, html{
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'inter', serif;
+    color: #F3C851;
 }
 
 .root {
-    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .main-panel {
@@ -20,8 +22,6 @@
     height: 100%;
     min-height: fit-content;
     min-width: fit-content;
-    border: solid black 1px;
-    border-radius: 16px;
 }
 
 .left-panel {
@@ -30,6 +30,7 @@
     height: 100%;
     width: 60%;
     background-color: aqua;
+    overflow: hidden;
 }
 
 .right-panel {
@@ -41,10 +42,15 @@
     align-items: center;
 }
 
+.glass {
+    border: solid black 1px;
+    border-radius: 16px;
+}
+
 .icons-nav {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     width: 100px;
     padding: 10px;
     background-color: bisque;
@@ -54,19 +60,48 @@
 .icons-nav a {
     text-decoration: none;
     color: #F3C851;
+    font-size: large;
 }
 
 .dynamic-content{
     background-color: bisque;
     width: 80%;
     height: 60%;
+    max-width: 550px;
+    min-height: fit-content;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dynamic-content p{
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
+    width: 60%;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dynamic-content div{
+    width: 80%;
+    height: 80%;
 }
 
 .static-content {
     flex: 1 1 auto;
     background-color: blueviolet;
     width: 100%;
-    padding: 20px;
+    min-width: fit-content;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-media {
@@ -80,16 +115,53 @@
 }
 
 .card {
-    height: 60px;
-    width: 100px;
+    position: absolute;
+    height: 160px;
+    width: 320px;
+    padding: 5px;
+    font-size: larger;
+
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;
+    text-align: center;
 }
 
 .card-1 {
     background-color: rgb(241, 156, 52);
+    left: 8%;
 }
 .card-2 {
     background-color: rgb(121, 73, 15);
+    left: 48%;
+    top: 28%;
 }
 .card-3 {
-    background-color: rgb(26, 16, 5);
+    background-color: rgb(80, 128, 160);
+    top: 56%;
+    left: 8%;
+}
+
+/*have the container have a fixed size but size down at certain window size*/
+.container { 
+    background-color: aquamarine;
+    padding: 20px;
+    margin: 20px;
+    min-width: 700px;
+    min-height: 400px;
+    position: relative;
+}
+
+.img-container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img{
+    width: 320px;
+    height: 400px;
+    border-radius: 16px;
 }
