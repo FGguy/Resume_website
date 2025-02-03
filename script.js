@@ -1,18 +1,15 @@
 const projects = [
     {
-        name: 'MRE', 
-        description: 'car rental website.',
-        image: './assets/images/MRE.png'
-    },
-    {
         name: 'WikiFly', 
         description: 'chrome extension to get a words definition.',
-        image: './assets/images/wikifly.png'
+        image: './assets/images/wikifly.png',
+        github: 'https://github.com/kailaidescope/Wiki-Fly'
     },
     {
         name: 'Chip-8', 
         description: 'a retro computer emulator project',
-        image: './assets/images/chip8.png'
+        image: './assets/images/chip8.png',
+        github: 'https://github.com/FGguy/Chip8Emulator'
     }
 ]
 
@@ -39,13 +36,21 @@ function loadProjects(){
     const target = document.getElementById("projects");  
     target.innerHTML = projects.map((project)=>{
         return (
-            `<div class="project-card glass">
-                <img src="${project.image}" alt="project">
-                <div class="project-card-text">
-                    <h3>${project.name}</h3>
-                    <p>${project.description}</p>
+            `
+
+                <div class="project-card glass">
+                        <div class="project-card-image">
+                            <a href="${project.github}" >
+                                <img src="${project.image}" alt="project">
+                            </a>
+                        </div>
+                    <div class="project-card-text">
+                        <h3>${project.name}</h3>
+                        <p>${project.description}</p>
+                    </div>
                 </div>
-            </div>`
+
+            `
         );
     }).join(' ')
 }
