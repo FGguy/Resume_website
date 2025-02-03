@@ -12,9 +12,14 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    background-image: url('./assets/images/background.jpg');
+    background-size: cover;   /* Adjusts to fill the div without distortion */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
 }
 
 .main-panel {
+    background-color: rgba(0,0,0,0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,32 +34,38 @@
     flex-flow: column;
     height: 100%;
     width: 60%;
-    background-color: aqua;
     overflow: hidden;
 }
 
 .right-panel {
     height: 100%;
     width: 40%;
-    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .glass {
-    border: solid black 1px;
+    border: solid rgb(255, 255, 255) 0.5px;
     border-radius: 16px;
 }
+
+.white-transparent {
+    background-color: #29272763
+}
+
+.white-transparent-thicc{
+    background-color: #000000
+}
+
 
 .icons-nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100px;
-    padding: 10px;
-    background-color: bisque;
-
+    padding: 20px;
 }
 
 .icons-nav a {
@@ -63,12 +74,22 @@
     font-size: large;
 }
 
+a:hover{
+    text-decoration: none;
+    color: #FB0505;
+    font-size: large;
+}
+
+img:hover {
+    color: #FB0505;
+}
+
 .dynamic-content{
-    background-color: bisque;
-    width: 80%;
     height: 60%;
-    max-width: 550px;
-    min-height: fit-content;
+    width: 450px;
+    min-height: 600px;
+
+    overflow: hidden;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -94,7 +115,6 @@
 
 .static-content {
     flex: 1 1 auto;
-    background-color: blueviolet;
     width: 100%;
     min-width: fit-content;
     overflow: hidden;
@@ -128,23 +148,19 @@
 }
 
 .card-1 {
-    background-color: rgb(241, 156, 52);
     left: 8%;
 }
 .card-2 {
-    background-color: rgb(121, 73, 15);
     left: 48%;
     top: 28%;
 }
 .card-3 {
-    background-color: rgb(80, 128, 160);
     top: 56%;
     left: 8%;
 }
 
 /*have the container have a fixed size but size down at certain window size*/
 .container { 
-    background-color: aquamarine;
     padding: 20px;
     margin: 20px;
     min-width: 700px;
@@ -164,4 +180,31 @@
     width: 320px;
     height: 400px;
     border-radius: 16px;
+}
+
+.project-container {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card img{
+    height: 90px;
+    width: 90px;
+    padding: 20px;
 }
